@@ -1,0 +1,60 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clusters Puzzle Editor</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="editor.css" />
+  <!-- KaTeX for math preview -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <h1>Clusters - Puzzle Editor</h1>
+    <nav class="header-actions">
+    </nav>
+  </header>
+
+  <main class="view">
+    <section class="generator-bar">
+      <h3>New Skeleton</h3>
+      <div class="gen-inputs">
+        <label for="genGroups">Groups:</label>
+        <input id="genGroups" type="number" value="4" min="1" title="Number of Groups" />
+        <label for="genSize">Group size:</label>
+        <input id="genSize" type="number" value="4" min="2" title="Items per Group" />
+        <button id="btnGenerate" class="secondary">Generate Template</button>
+      </div>
+      <div class="file-actions">
+        <button id="btnDownload" class="primary">Download JSON</button>
+        <button id="btnCopy" class="secondary">Copy JSON</button>
+        <button id="btnShare" class="secondary">Share Link</button>
+      </div>
+    </section>
+
+    <div id="status" class="status-bar" aria-live="polite">Ready</div>
+
+    <section class="editor-workspace">
+      <div class="pane pane-json">
+        <label for="jsonInput">JSON Source</label>
+        <div class="code-editor">
+          <div class="gutter" id="gutter" aria-hidden="true"></div>
+          <div class="editor-layer">
+            <pre id="highlighting" aria-hidden="true"><code id="highlighting-content"></code></pre>
+            <textarea id="jsonInput" spellcheck="false"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="pane pane-preview">
+        <label>Live Preview</label>
+        <div id="previewContainer" class="found-rows"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="editor.js"></script>
+</body>
+</html>

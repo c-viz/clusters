@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clusters</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- KaTeX (for math rendering) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <h1>Clusters</h1>
+    <nav class="header-actions">
+      <button id="backToHome" class="secondary" hidden>Back to Menu</button>
+    </nav>
+  </header>
+
+  <!-- Home / Selection View -->
+  <main id="homeView" class="view">
+    <section class="config">
+      <h2>Game Setup</h2>
+      <form id="configForm" class="config-form">
+        <div class="form-row">
+          <label for="puzzleSelect">Select Puzzle</label>
+          <select id="puzzleSelect" name="puzzle"></select>
+        </div>
+        <div class="form-row">
+          <label for="tries">Mistakes allowed</label>
+          <input id="tries" name="tries" type="text" placeholder="e.g., 4 or inf" value="4" />
+        </div>
+        <button type="submit" class="primary">Start</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Game View -->
+  <main id="gameView" class="view" hidden>
+    <section class="statusbar">
+      <div id="statusText" aria-live="polite">Loading...</div>
+      <div class="actions">
+        <button id="submitGroup" class="primary" disabled>Submit Group</button>
+        <button id="clearSelection" class="secondary">Clear Selection</button>
+        <button id="shuffleRemaining" class="secondary">Shuffle Remaining</button>
+        <button id="resetGame" class="secondary">Reset Puzzle</button>
+      </div>
+    </section>
+
+    <!-- Found groups as full-width rows -->
+    <section id="foundRows" class="found-rows" aria-live="polite"></section>
+
+    <!-- Remaining cards grid -->
+    <section id="grid" class="grid" role="grid" aria-label="Cards grid"></section>
+
+    <!-- Puzzle Metadata -->
+    <div id="puzzleMeta" class="puzzle-meta" aria-live="polite"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

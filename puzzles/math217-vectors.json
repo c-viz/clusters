@@ -1,0 +1,125 @@
+{
+  "id": "math217-vectors",
+  "title": "Unit 1 - Vectors",
+  "date": "2026-01-05",
+  "author": "Stephan",
+  "groupSize": 4,
+  "groups": [
+    {
+      "name": "Ways to represent the vector $\\begin{bmatrix}1 \\\\ 2\\end{bmatrix}$",
+      "items": [
+        {
+          "captionTop": "$A(1,-1)$, $B(2,1)$",
+          "content": [
+            "$$\\overrightarrow{AB}$$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$$\\hat{i} + 2\\hat{j}$$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\begin{bmatrix}-1 \\\\ 0\\end{bmatrix} + 2\\begin{bmatrix}1 \\\\ 1\\end{bmatrix}$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\begin{bmatrix}1 \\\\ 2\\end{bmatrix}$"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Orthogonality",
+      "items": [
+        {
+          "captionTop": "",
+          "content": [
+            "$\\overrightarrow{u}\\bot \\overrightarrow{v}$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\overrightarrow{a}\\cdot \\overrightarrow{b}$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$|\\overrightarrow{x}|^2+|\\overrightarrow{y}|^2 = $","$|\\overrightarrow{x}+\\overrightarrow{y}|^2$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\cos(\\theta)=0$"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Normal vectors",
+      "items": [
+        {
+          "captionTop": "",
+          "content": [
+            "$\\begin{bmatrix}0.6 \\\\ 0.8\\end{bmatrix}$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\hat v$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\frac{1}{|\\overrightarrow{w}|}\\overrightarrow{w}$"
+          ]
+        },
+        {
+          "captionTop": "$\\overrightarrow{u} = \\begin{bmatrix}s \\\\ t\\end{bmatrix}$",
+          "content": [
+            "$s^2+t^2=1$"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cross product",
+      "items": [
+        {
+          "captionTop": "",
+          "content": [
+            "$\\overrightarrow{u} \\times \\overrightarrow{v}$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$|\\overrightarrow{u}||\\overrightarrow{v}|\\sin(\\theta)\\, \\mathbf{n}$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "Item 4.3"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "Item 4.4"
+          ]
+        }
+      ]
+    }
+  ]
+}

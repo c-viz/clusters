@@ -1,0 +1,45 @@
+{
+  "id": "math-mix",
+  "title": "Math Mix",
+  "date": "2026-01-06",
+  "author": "Stephan",
+  "groupSize": 4,
+  "groups": [
+    {
+      "name": "Integers",
+      "items": [
+        { "content": ["-1"] },
+        { "content": ["0"] },
+        { "content": ["1"] },
+        { "content": ["42"] }
+      ]
+    },
+    {
+      "name": "Constants",
+      "items": [
+        { "content": ["$e$"] },
+        { "content": ["$i$"] },
+        { "content": ["$\\phi$"] },
+        { "content": ["$c$"] }
+      ]
+    },
+    {
+      "name": "Greek Letters",
+      "items": [
+        { "content": ["$\\alpha$"] },
+        { "content": ["$\\beta$"] },
+        { "content": ["$\\gamma$"] },
+        { "content": ["$\\delta$"] }
+      ]
+    },
+    {
+      "name": "Numbers related to Pi",
+      "items": [
+        { "content": ["$\\pi$"] },
+        { "content": ["$3.14$"] },
+        { "content": ["$\\frac{22}{7}$"] },
+        { "content": ["$180^\\circ$"] }
+      ]
+    }
+  ]
+}
