@@ -4,75 +4,6 @@
 
   const STORAGE_KEY = 'clusters_editor_draft';
 
-  // Palette matches app.js
-  const palette = ['#854d0e', '#15803d', '#1d4ed8', '#7e22ce', '#be185d', '#0e7490'];
-
-  // ---------- Math rendering (same behavior as app) ----------
-  function renderTextWithMath(text, { displayAllowed = true } = {}) {
-    const container = document.createElement('div');
-    container.className = 'line';
-
-    const parts = [];
-    let i = 0;
-    while (i < text.length) {
-      const nextDisplay = displayAllowed ? text.indexOf('$$', i) : -1;
-      const nextInline = text.indexOf('$', i);
-      const nextEscaped = text.indexOf('\\$', i);
-
-      const indices = [nextDisplay, nextInline, nextEscaped].filter(x => x !== -1);
-      if (indices.length === 0) {
-        parts.push(text.slice(i));
-        break;
-      }
-      const minIdx = Math.min(...indices);
-
-      if (minIdx > i) parts.push(text.slice(i, minIdx));
-
-      if (minIdx === nextEscaped) {
-        parts.push('$');
-        i = minIdx + 2;
-      } else if (minIdx === nextDisplay) {
-        const end = text.indexOf('$$', minIdx + 2);
-        if (end === -1) { parts.push(text.slice(minIdx)); break; }
-        parts.push({ type: 'display', tex: text.slice(minIdx + 2, end).trim() });
-        i = end + 2;
-      } else { // nextInline
-        const end = text.indexOf('$', minIdx + 1);
-        if (end === -1) { parts.push(text.slice(minIdx)); break; }
-        parts.push({ type: 'inline', tex: text.slice(minIdx + 1, end).trim() });
-        i = end + 1;
-      }
-    }
-
-    parts.forEach(part => {
-      if (typeof part === 'string') {
-        container.appendChild(document.createTextNode(part));
-      } else if (part.type === 'inline') {
-        const span = document.createElement('span');
-        if (window.katex?.render) {
-          try { window.katex.render(part.tex, span, { throwOnError: false, displayMode: false }); }
-          catch { span.textContent = part.tex; span.className = 'inline-math'; }
-        } else { span.textContent = part.tex; span.className = 'inline-math'; }
-        container.appendChild(span);
-      } else if (part.type === 'display') {
-        const block = document.createElement('div');
-        block.className = 'display-math';
-        if (window.katex?.render) {
-          try { window.katex.render(part.tex, block, { throwOnError: false, displayMode: true }); }
-          catch { block.textContent = part.tex; block.classList.add('inline-math'); }
-        } else { block.textContent = part.tex; block.classList.add('inline-math'); }
-        container.appendChild(block);
-      }
-    });
-
-    return container;
-  }
-  function renderCaptionWithMath(text) {
-    const el = renderTextWithMath(text, { displayAllowed: false });
-    el.className = 'caption';
-    return el;
-  }
-
   // ---------- Helpers ----------
   function todayISO() {
     const d = new Date();
@@ -92,9 +23,9 @@
     
     if (card.onClick) btn.addEventListener('click', card.onClick);
 
-    if (card.captionTop) btn.appendChild(renderCaptionWithMath(card.captionTop));
+    if (card.captionTop) btn.appendChild(ClustersUtils.renderCaptionWithMath(card.captionTop));
     const lines = document.createElement('div'); lines.className = 'lines';
-    card.content.forEach(lineText => { lines.appendChild(renderTextWithMath(lineText)); });
+    card.content.forEach(lineText => { lines.appendChild(ClustersUtils.renderTextWithMath(lineText)); });
     btn.appendChild(lines);
     return btn;
   }
@@ -106,7 +37,7 @@
     if (!data.groups || !Array.isArray(data.groups)) return;
 
     data.groups.forEach((group, gi) => {
-      const groupColor = palette[gi % palette.length];
+      const groupColor = ClustersUtils.palette[gi % ClustersUtils.palette.length];
       
       const row = document.createElement('div');
       row.className = 'found-row';
@@ -114,7 +45,7 @@
 
       const title = document.createElement('div');
       title.className = 'found-row-title';
-      title.appendChild(renderTextWithMath(group.name || `Group ${gi + 1}`, { displayAllowed: false }));
+      title.appendChild(ClustersUtils.renderTextWithMath(group.name || `Group ${gi + 1}`, { displayAllowed: false }));
       title.title = "Click to edit in JSON";
       title.addEventListener('click', () => jumpToSource(gi));
       row.appendChild(title);
@@ -134,6 +65,8 @@
       row.appendChild(cardsContainer);
       container.appendChild(row);
     });
+
+    setTimeout(ClustersUtils.fitCards, 0);
   }
 
   // ---------- Editor Logic ----------
@@ -421,6 +354,7 @@
     qs('#btnCopy').addEventListener('click', copyJson);
     qs('#btnShare').addEventListener('click', shareLink);
     qs('#jsonInput').addEventListener('scroll', syncScroll);
+    window.addEventListener('resize', () => requestAnimationFrame(ClustersUtils.fitCards));
   }
 
   if (document.readyState === 'loading') {
