@@ -38,7 +38,6 @@
       "name": "Orthogonality",
       "items": [
         {
-          "captionTop": "",
           "content": [
             "$\\overrightarrow{u}\\bot \\overrightarrow{v}$"
           ]
@@ -46,13 +45,12 @@
         {
           "captionTop": "",
           "content": [
-            "$\\overrightarrow{a}\\cdot \\overrightarrow{b}$"
+            "$\\overrightarrow{a}\\cdot \\overrightarrow{b} = 0$"
           ]
         },
         {
-          "captionTop": "",
           "content": [
-            "$|\\overrightarrow{x}|^2+|\\overrightarrow{y}|^2 = $","$|\\overrightarrow{x}+\\overrightarrow{y}|^2$"
+            "$|\\overrightarrow{x}|^2+|\\overrightarrow{y}|^2 = |\\overrightarrow{x}+\\overrightarrow{y}|^2$"
           ]
         },
         {
@@ -85,9 +83,8 @@
           ]
         },
         {
-          "captionTop": "$\\overrightarrow{u} = \\begin{bmatrix}s \\\\ t\\end{bmatrix}$",
           "content": [
-            "$s^2+t^2=1$"
+            "$u_x^2+u_y^2+u_z^2=1$"
           ]
         }
       ]
@@ -98,25 +95,26 @@
         {
           "captionTop": "",
           "content": [
-            "$\\overrightarrow{u} \\times \\overrightarrow{v}$"
+            "$\\overrightarrow{a} \\times \\overrightarrow{b}$"
           ]
         },
         {
           "captionTop": "",
           "content": [
-            "$|\\overrightarrow{u}||\\overrightarrow{v}|\\sin(\\theta)\\, \\mathbf{n}$"
+            "$|\\overrightarrow{x}||\\overrightarrow{y}|\\sin(\\theta)\\, \\hat{n}$"
           ]
         },
         {
           "captionTop": "",
           "content": [
-            "Item 4.3"
+            "$\\begin{bmatrix} u_yv_z-u_zv_y\\\\ u_zv_x-u_xv_z\\\\ u_xv_y-u_yv_x \\end{bmatrix}$"
           ]
         },
         {
           "captionTop": "",
           "content": [
-            "Item 4.4"
+            "Orthogonal to $\\overrightarrow{a}$ and $\\overrightarrow{b}$",
+            "Magnitude: area of ▱"
           ]
         }
       ]
