@@ -1,0 +1,125 @@
+{
+  "id": "puzzle-2026-01-18",
+  "title": "Unit 2-3",
+  "date": "2026-01-18",
+  "author": "Stephan",
+  "groupSize": 4,
+  "groups": [
+    {
+      "name": "Vector valued functions",
+      "items": [
+        {
+          "captionTop": "",
+          "content": [
+            "$\\overrightarrow{r}(t)$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$x(t)\\hat i +y(t)\\hat j +z(t)\\hat k$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\begin{bmatrix}x(t)\\\\ y(t)\\\\ z(t) \\end{bmatrix}$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "Position of a particle", "at time $t$"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Derivative of vector valued function",
+      "items": [
+        {
+          "captionTop": "",
+          "content": [
+            "Velocity"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\begin{bmatrix}x'(t)\\\\ y'(t)\\\\ z'(t) \\end{bmatrix}$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\lim_{h\\to 0}\\frac{\\overrightarrow{r}(t+h)-\\overrightarrow{r}(t)}{h}$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\overrightarrow{r}'(t)$"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Level curves of multivariable function",
+      "items": [
+        {
+          "captionTop": "",
+          "content": [
+            "$f(x,y)=k$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$x^2+y^2\\sin(x)=k$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "Curves where function","is constant"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "Contour plots"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Partial derivatives",
+      "items": [
+        {
+          "captionTop": "",
+          "content": [
+            "$\\frac{\\partial f}{\\partial x}$, $\\frac{\\partial f}{\\partial y}$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\lim_{h\\to 0}\\frac{f(x+h,y)-f(x,y)}{h}$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "Slope of tangent","in cosssection"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$f_x$"
+          ]
+        }
+      ]
+    }
+  ]
+}
