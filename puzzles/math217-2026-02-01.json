@@ -1,0 +1,126 @@
+{
+  "id": "math217-2026-02-01",
+  "title": "MATH 217: Unit 4",
+  "date": "2026-02-01",
+  "author": "Stephan",
+  "groupSize": 4,
+  "groups": [
+    {
+      "name": "Gradient",
+      "items": [
+        {
+          "captionTop": "",
+          "content": [
+            "Vector of partial derivatives"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\nabla f$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\begin{bmatrix}\\frac{\\partial f}{\\partial x}\\\\ \\frac{\\partial f}{\\partial y}\\\\ \\frac{\\partial f}{\\partial z}\\end{bmatrix}$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "Gives direction", "with maximal", "directional derivative"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Directional derivative",
+      "items": [
+        {
+          "captionTop": "",
+          "content": [
+            "$D_{\\hat{T}}f$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\hat T \\cdot \\nabla F$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "Slope of tangent line","in cross section","with direction $\\hat T$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\frac{df}{dt}$","where", "$f(x_0+tT_1,y_0+tT_2)$"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Second order Taylor polynomial",
+      "items": [
+        {
+          "captionTop": "",
+          "content": [
+            "Quadratic approximation"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$f(x_0,y_0)+ \\nabla f(x_0,y_0)\\cdot\\begin{bmatrix}x-x_0 \\\\ y-y_0\\end{bmatrix}$",
+            "$+ \\frac12 \\left( Hf(x_0,y_0) \\begin{bmatrix}x-x_0 \\\\ y-y_0\\end{bmatrix}\\right) \\cdot \\begin{bmatrix}x-x_0 \\\\ y-y_0\\end{bmatrix}$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$T^2_{(x_0,y_0)}(x,y)$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "\"osculating\" paraboloid"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Implicit differentiation",
+      "items": [
+        {
+          "captionTop": "",
+          "content": [
+            "$-\\frac{\\partial F}{\\partial x}\\Bigg |_{z}\\Big(\\frac{\\partial F}{\\partial z}\\Big)^{-1}$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\frac{\\partial z}{\\partial x}$", "where", "$F(x,y,z(x,y))=0$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "Derivative of", "implicitly defined","function"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "(often) simpler than", "trying to \"isolate\" $z$", "and then differentiate"
+          ]
+        }
+      ]
+    }
+  ]
+}
