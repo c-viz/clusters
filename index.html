@@ -10,6 +10,32 @@
   <!-- KaTeX (for math rendering) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <!-- QRCode.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    /* Overlay styles */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .overlay[hidden] {
+      display: none;
+    }
+    .overlay-content {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <header class="app-header">
@@ -18,6 +44,7 @@
       <div class="copyright">&copy; <a href="https://stephan.pfannerer-mittas.net/" target="_blank">Stephan Pfannerer-Mittas</a></div>
     </div>
     <nav class="header-actions">
+      <button id="shareBtn" class="secondary">Share</button>
       <button id="backToHome" class="secondary" hidden>Back to Menu</button>
     </nav>
   </header>
@@ -62,7 +89,32 @@
     <div id="puzzleMeta" class="puzzle-meta" aria-live="polite"></div>
   </main>
 
+  <!-- Share Overlay -->
+  <div id="shareOverlay" class="overlay" hidden>
+    <div class="overlay-content">
+      <div id="qrcode"></div>
+      <p style="margin-top: 10px; color: black;">Scan to play!</p>
+    </div>
+  </div>
+
   <script src="utils.js"></script>
   <script src="app.js"></script>
+  <script>
+    document.getElementById('shareBtn').addEventListener('click', () => {
+      const overlay = document.getElementById('shareOverlay');
+      const qrContainer = document.getElementById('qrcode');
+      qrContainer.innerHTML = '';
+      new QRCode(qrContainer, {
+        text: window.location.href,
+        width: 256,
+        height: 256
+      });
+      overlay.hidden = false;
+    });
+
+    document.getElementById('shareOverlay').addEventListener('click', () => {
+      document.getElementById('shareOverlay').hidden = true;
+    });
+  </script>
 </body>
 </html>
