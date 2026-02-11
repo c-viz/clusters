@@ -1,0 +1,127 @@
+{
+  "id": "puzzle-2026-02-10",
+  "title": "MATH 217: Unit 5",
+  "date": "2026-02-10",
+  "author": "Stephan",
+  "groupSize": 4,
+  "groups": [
+    {
+      "name": "Local maximum",
+      "items": [
+        {
+          "captionTop": "For all $(x,y)$ in $D_R$:",
+          "content": [
+            "$f(x_0,y_0)\\ge f(x,y)$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\nabla f = \\overrightarrow 0$", "$f_{xx} < 0$", "$f_{xx}f_{yy}-f_{xy}^2 > 0$"
+          ]
+        },
+        {
+          "captionTop": "$(0,0)$ for",
+          "content": [
+            "$-x^2-y^2$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "A point that locally", "has the greatest", "function value"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Saddle point",
+      "items": [
+        {
+          "captionTop": "",
+          "content": [
+            "In every neighbourgood","arround critical point $(x_0,y_0)$",
+            "exist $(x_1,y_1)$ and $(x_2,y_2)$ with",
+            "$f(x_1,y_1)\\ge f(x_0,y_0)\\ge f(x_2,y_2)$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\nabla f = \\overrightarrow 0$", "$f_{xx}f_{yy}-f_{xy}^2 < 0$"
+          ]
+        },
+        {
+          "captionTop": "$(0,0)$ for",
+          "content": [
+            "$x^2-y^2$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "A critical point", "that is neither max", "nor min"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Local minimum",
+      "items": [
+        {
+          "captionTop": "For all $(x,y)$ in $D_R$:",
+          "content": [
+            "$f(x_0,y_0)\\le f(x,y)$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\nabla f = \\overrightarrow 0$", "$f_{xx} > 0$", "$f_{xx}f_{yy}-f_{xy}^2 > 0$"
+          ]
+        },
+        {
+          "captionTop": "$(0,0)$ for",
+          "content": [
+            "$x^2+y^2$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "A point that locally", "has the smallest", "function value"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lagrange multipliers",
+      "items": [
+        {
+          "captionTop": "",
+          "content": [
+            "$\\nabla f = \\lambda \\nabla g$"
+          ]
+        },
+        {
+          "captionTop": "$F(x,y,\\lambda) = f(x,y)-\\lambda g(x,y)$",
+          "content": [
+            "$\\nabla F = \\overrightarrow{0}$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "Critical points of $f$", "restricted to the", "curve $g(x,y)=0$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "Optimizig $f(x,y)$", "under the constraint","$g(x,y)=0$"
+          ]
+        }
+      ]
+    }
+  ]
+}
