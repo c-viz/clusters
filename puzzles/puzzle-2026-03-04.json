@@ -1,0 +1,125 @@
+{
+  "id": "puzzle-2026-03-04",
+  "title": "Units 6-7",
+  "date": "2026-03-04",
+  "author": "Stephan",
+  "groupSize": 4,
+  "groups": [
+    {
+      "name": "Infinitesimal volume element",
+      "items": [
+        {
+          "captionTop": "",
+          "content": [
+            "$dV$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$dx\\,dy\\,dz$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$\\rho^2 \\sin \\varphi \\, d\\rho \\, d\\theta \\, d\\varphi$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$r \\, dr \\, d\\theta \\, dz$"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Infinitesimal area element",
+      "items": [
+        {
+          "captionTop": "",
+          "content": [
+            "$dA$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$dx\\, dy$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$dy\\, dx$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$r \\, dr \\, d\\theta$"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Type 1 region",
+      "items": [
+        {
+          "captionTop": "",
+          "content": [
+            "$a\\le x \\le b$","$g(x)\\le y \\le h(x)$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$$\\int_{a}^b\\int_{g(x)}^{h(x)} f(x,y)\\,dy\\,dx$$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "First integrate over $y$", "then over $x$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "Slice region", "with $x$ constant"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Fubini's theorem",
+      "items": [
+        {
+          "captionTop": "$D=[a,b]\\times [c,d]$",
+          "content": [
+            "$$\\iint_D f(x,y)\\,dA$$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$$\\int_c^d\\int_a^b  f(x,y)\\,dx\\,dy$$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "$$\\int_a^b\\int_c^d  f(x,y)\\,dy\\,dx$$"
+          ]
+        },
+        {
+          "captionTop": "",
+          "content": [
+            "Order of integration", "doesn't matter"
+          ]
+        }
+      ]
+    }
+  ]
+}
