@@ -1,0 +1,45 @@
+{
+  "id": "puzzle-2026-03-20",
+  "title": "Units 8-9",
+  "date": "2026-03-20",
+  "author": "Stephan",
+  "groupSize": 4,
+  "groups": [
+    {
+      "name": "Flux",
+      "items": [
+        { "content": ["$\\oint_C \\vec{F} \\cdot \\hat{n} \\, ds$"] },
+        { "content": ["$\\iint_D (\\nabla \\cdot \\vec{F}) \\, dA$"] },
+        { "content": ["$\\oiint_S \\vec{F} \\cdot d\\vec{A}$"] },
+        { "content": ["$\\iiint_V (\\text{div} \\vec{F}) \\, dV$"] }
+      ]
+    },
+    {
+      "name": "Derivatives of vectorfields",
+      "items": [
+        { "content": ["$\\nabla \\cdot \\vec{F}$"] },
+        { "content": ["$\\nabla \\times \\vec{F}$"] },
+        { "content": ["Div"] },
+        { "content": ["Curl"] }
+      ]
+    },
+    {
+      "name": "Line integral",
+      "items": [
+        { "content": ["$\\int_C \\vec{F} \\cdot d\\vec{r}$"] },
+        { "content": ["$\\int_C \\vec{F} \\cdot \\hat{T} \\, ds$"] },
+        { "content": ["Work"] },
+        { "content": ["integral along a curve"] }
+      ]
+    },
+    {
+      "name": "Vector fields",
+      "items": [
+        { "content": ["Force field"] },
+        { "content": ["Velocity field"] },
+        { "content": ["$\\overrightarrow{F}$"] },
+        { "content": ["$x\\hat{i}+y\\hat{j}+z\\hat{k}$"] }
+      ]
+    }
+  ]
+}
