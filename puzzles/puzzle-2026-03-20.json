@@ -8,17 +8,17 @@
     {
       "name": "Flux",
       "items": [
-        { "content": ["$\\oint_C \\vec{F} \\cdot \\hat{n} \\, ds$"] },
-        { "content": ["$\\iint_D (\\nabla \\cdot \\vec{F}) \\, dA$"] },
-        { "content": ["$\\oiint_S \\vec{F} \\cdot d\\vec{A}$"] },
-        { "content": ["$\\iiint_V (\\text{div} \\vec{F}) \\, dV$"] }
+        { "content": ["$\\oint_C \\overrightarrow{F} \\cdot \\hat{n} \\, ds$"] },
+        { "content": ["$\\iint_D (\\nabla \\cdot \\overrightarrow{F}) \\, dA$"] },
+        { "content": ["$\\oiint_S \\overrightarrow{F} \\cdot d\\overrightarrow{A}$"] },
+        { "content": ["$\\iiint_V (\\text{div} \\overrightarrow{F}) \\, dV$"] }
       ]
     },
     {
       "name": "Derivatives of vectorfields",
       "items": [
-        { "content": ["$\\nabla \\cdot \\vec{F}$"] },
-        { "content": ["$\\nabla \\times \\vec{F}$"] },
+        { "content": ["$\\nabla \\cdot \\overrightarrow{F}$"] },
+        { "content": ["$\\nabla \\times \\overrightarrow{F}$"] },
         { "content": ["Div"] },
         { "content": ["Curl"] }
       ]
@@ -26,8 +26,8 @@
     {
       "name": "Line integral",
       "items": [
-        { "content": ["$\\int_C \\vec{F} \\cdot d\\vec{r}$"] },
-        { "content": ["$\\int_C \\vec{F} \\cdot \\hat{T} \\, ds$"] },
+        { "content": ["$\\int_C \\overrightarrow{F} \\cdot d\\overrightarrow{r}$"] },
+        { "content": ["$\\int_C \\overrightarrow{F} \\cdot \\hat{T} \\, ds$"] },
         { "content": ["Work"] },
         { "content": ["integral along a curve"] }
       ]
